@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tenderwerk Vastgoed · Tenders schrijven voor taxateurs en vastgoedadviseurs</title>
+<meta name="description" content="Tenderwerk Vastgoed schrijft aanbestedingen voor taxateurs, WOZ-bureaus en vastgoedadviseurs. Je betaalt alleen als je wint.">
+<meta property="og:title" content="Tenderwerk Vastgoed">
+<meta property="og:description" content="Wij schrijven je inschrijving. Je betaalt alleen als je wint.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f3a34'/%3E%3Cpath d='M9 10h14M16 10v13' stroke='%23f4efe6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --paper:#f4efe6; --paper-2:#ebe4d7; --ink:#1c2321; --ink-2:#4a524f;
+  --green:#1f3a34; --green-2:#2d5249; --brick:#a4462b; --line:#d6cdbd;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 "Public Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Newsreader",Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.1}
+h1{font-size:clamp(40px,6vw,72px)}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:20px}
+h3{font-size:24px;margin-bottom:8px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brick);margin-bottom:16px}
+p.lead{font-size:20px;color:var(--ink-2);max-width:620px}
+
+/* nav */
+header.top{position:sticky;top:0;z-index:10;background:rgba(244,239,230,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Newsreader",serif;font-size:22px;text-decoration:none;display:flex;gap:10px;align-items:center}
+.logo b{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:6px;background:var(--green);color:var(--paper);font:600 15px "Public Sans"}
+nav a{text-decoration:none;font-size:15px;color:var(--ink-2);margin-left:28px}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--green);color:var(--paper);text-decoration:none;padding:14px 22px;border-radius:4px;font-weight:600;font-size:16px;border:0;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--green-2)}
+nav .btn{padding:10px 16px;margin-left:28px;color:var(--paper)}
+
+/* hero */
+.hero{padding:96px 0 80px;border-bottom:1px solid var(--line)}
+.hero .grid{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:end}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero p.lead{margin:28px 0 36px}
+.terms{border-left:2px solid var(--brick);padding:4px 0 4px 24px}
+.terms div{padding:14px 0;border-bottom:1px solid var(--line)}
+.terms div:last-child{border:0}
+.terms strong{display:block;font-family:"Newsreader",serif;font-size:28px;font-weight:400}
+.terms span{font-size:15px;color:var(--ink-2)}
+
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:1px solid var(--ink)}
+.step{padding:28px 24px 0 0}
+.step .n{font-family:"Newsreader",serif;font-size:15px;color:var(--brick);margin-bottom:28px;display:block}
+.step p{color:var(--ink-2);font-size:16px}
+.you{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;background:var(--paper-2);padding:3px 8px;border-radius:3px}
+
+/* niches */
+.niches{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.niche-list{list-style:none}
+.niche-list li{padding:20px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:24px}
+.niche-list li:first-child{border-top:1px solid var(--line)}
+.niche-list strong{font-weight:600}
+.niche-list span{color:var(--ink-2);font-size:15px;text-align:right}
+
+/* why */
+.dark{background:var(--green);color:var(--paper);border:0}
+.dark .eyebrow{color:#e0a58f}
+.dark p{color:#cfd8d3}
+.why{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-top:48px}
+.why h3{color:var(--paper)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.about blockquote{font-family:"Newsreader",serif;font-size:30px;line-height:1.25;border-left:2px solid var(--brick);padding-left:24px}
+.about p{color:var(--ink-2);margin-bottom:16px}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:22px 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-family:"Newsreader",serif;font-size:24px;line-height:1;color:var(--brick)}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--ink-2);max-width:720px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
+form{display:grid;gap:16px}
+label{font-size:14px;font-weight:600;display:grid;gap:6px}
+input,textarea,select{font:inherit;font-weight:400;padding:12px 14px;border:1px solid var(--line);background:#fffdf8;border-radius:4px;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--green);outline-offset:1px;border-color:var(--green)}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.small{font-size:13px;color:var(--ink-2)}
+
+footer{padding:40px 0;font-size:14px;color:var(--ink-2)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:860px){
+  nav a:not(.btn){display:none}
+  .hero{padding:64px 0}
+  .hero .grid,.niches,.about,.contact{grid-template-columns:1fr;gap:40px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:32px}
+  .why{grid-template-columns:1fr;gap:32px}
+  section{padding:72px 0}
+}
+@media (max-width:520px){
+  .wrap{padding:0 16px}
+  .steps{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .niche-list li{flex-direction:column;gap:4px}
+  .niche-list span{text-align:left}
+  nav .btn{margin-left:0}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><b>T</b>Tenderwerk Vastgoed</a>
+    <nav>
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="#voor-wie">Voor wie</a>
+      <a href="#vragen">Vragen</a>
+      <a class="btn" href="#contact">Plan een belafspraak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="border-top:0">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Tenderschrijven voor vastgoed</p>
+      <h1>Wij schrijven je inschrijving. Je betaalt <em>alleen als je wint.</em></h1>
+      <p class="lead">Gemeenten, provincies, scholen en woningcorporaties besteden elk jaar honderden vastgoedopdrachten aan. Wij vinden de tenders die bij je passen en schrijven de hele inschrijving. Jij doet waar je goed in bent: taxeren, inspecteren en adviseren.</p>
+      <a class="btn" href="#contact">Plan een belafspraak van 20 minuten</a>
+    </div>
+    <div class="terms">
+      <div><strong>€0</strong><span>vooraf, ook niet als je verliest</span></div>
+      <div><strong>Alleen bij gunning</strong><span>een vooraf afgesproken percentage van de opdracht</span></div>
+      <div><strong>20 minuten</strong><span>van jouw tijd om te starten</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="werkwijze">
+  <div class="wrap">
+    <p class="eyebrow">Werkwijze</p>
+    <h2>Zo werkt het</h2>
+    <p class="lead">Je hoeft geen aanbestedingsleidraad van 70 pagina's door te lezen. Dat doen wij.</p>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h3>We vinden de tender</h3><p>We volgen TenderNed en andere platforms en kijken alleen naar opdrachten waar jouw bureau een echte kans maakt.</p></div>
+      <div class="step"><span class="n">02</span><h3>We bellen</h3><p>Twintig minuten. We checken de harde eisen, zoals referenties en certificeringen, en halen op wat we nodig hebben.</p><span class="you">Jouw rol</span></div>
+      <div class="step"><span class="n">03</span><h3>We schrijven</h3><p>Plan van aanpak, kwaliteitsborging, risico's: precies op de gunningscriteria en binnen de paginalimiet.</p></div>
+      <div class="step"><span class="n">04</span><h3>Jij keurt goed</h3><p>Je leest mee, tekent wat getekend moet worden en wij dienen in. Gegund? Dan pas sturen we een factuur.</p><span class="you">Jouw rol</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="voor-wie">
+  <div class="wrap niches">
+    <div>
+      <p class="eyebrow">Voor wie</p>
+      <h2>Gespecialiseerd in vastgoed, niet in alles</h2>
+      <p class="lead">Een tenderbureau dat ook schoonmaak en ICT doet, kent jouw vak niet. Wij werken alleen voor vastgoedprofessionals en spreken de taal van de beoordelaar.</p>
+    </div>
+    <ul class="niche-list">
+      <li><strong>Register-taxateurs</strong><span>Raamovereenkomsten voor taxaties, erfpacht, schadeloosstelling</span></li>
+      <li><strong>WOZ-bureaus</strong><span>WOZ-uitvoering en waardebepaling voor gemeenten en samenwerkingsverbanden</span></li>
+      <li><strong>MJOP en conditiemeting</strong><span>NEN 2767-inspecties en onderhoudsplannen voor scholen en gemeentelijk vastgoed</span></li>
+      <li><strong>Vastgoedadvies</strong><span>Huisvestingsadvies, portefeuillestrategie, aan- en verkoop</span></li>
+      <li><strong>Onderhoud en verduurzaming</strong><span>Maatschappelijk vastgoed: scholen, sporthallen, gemeentehuizen</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow">Waarom no cure no pay</p>
+    <h2>Wij lopen het risico, niet jij</h2>
+    <div class="why">
+      <div><h3>We kiezen streng</h3><p>Omdat we alleen verdienen als je wint, schrijven we niet op elke tender in. Maakt je bureau geen kans, dan zeggen we dat eerlijk.</p></div>
+      <div><h3>Geen verrassingen</h3><p>Het percentage spreken we vooraf af, in een korte overeenkomst. Er komen geen uurtarieven of extra kosten bij.</p></div>
+      <div><h3>Jouw tijd blijft van jou</h3><p>Een goede inschrijving kost al snel 40 uur. Die uren gaan bij ons weg, niet bij jouw taxateurs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap about">
+    <blockquote>"De beste taxateurs verliezen tenders niet op vakkennis, maar op papier."</blockquote>
+    <div>
+      <p class="eyebrow">Over Tenderwerk Vastgoed</p>
+      <p>Tenderwerk Vastgoed is opgericht door Yasmine Dahhane, met een achtergrond in vastgoed. Ze zag hoe vaak goede bureaus niet eens meedoen aan aanbestedingen, omdat het schrijfwerk te veel tijd kost of te onzeker is.</p>
+      <p>Daarom werken we zonder kosten vooraf. We combineren kennis van vastgoed en aanbesteden met slimme tools, zodat we snel kunnen werken zonder in te leveren op kwaliteit. Elke inschrijving wordt door een mens gecontroleerd en door jou goedgekeurd.</p>
+    </div>
+  </div>
+</section>
+
+<section id="vragen">
+  <div class="wrap">
+    <p class="eyebrow">Vragen</p>
+    <h2>Veelgestelde vragen</h2>
+    <details><summary>Wat kost het precies?</summary><p>Niets vooraf. Win je de opdracht, dan betaal je een vooraf afgesproken percentage van de opdrachtwaarde. Win je niet, dan betaal je niets. Bij kleine opdrachten spreken we een minimumbedrag af.</p></details>
+    <details><summary>Hoeveel tijd kost het mij?</summary><p>Een belgesprek van ongeveer 20 minuten, het aanleveren van cv's, referenties en certificaten, en het doorlezen en ondertekenen van de definitieve versie. De rest doen wij.</p></details>
+    <details><summary>Wie dient de inschrijving in?</summary><p>Jouw bedrijf is en blijft de inschrijver. Met jouw volmacht kunnen wij het uploaden regelen, of jij doet dat zelf. Documenten zoals het UEA en het prijzenblad onderteken je zelf.</p></details>
+    <details><summary>Wat als ik niet aan de eisen voldoe?</summary><p>Dan zeggen we dat direct na het eerste gesprek. Soms is samenwerken met een ander bureau of een onderaannemer een oplossing; dan denken we mee.</p></details>
+    <details><summary>Gebruiken jullie AI?</summary><p>Ja, voor het zoeken van tenders en het analyseren van stukken. Dat maakt ons snel. Elke tekst wordt gecontroleerd en jij keurt alles goed voordat er iets wordt ingediend. Feiten over jouw bureau komen altijd van jou.</p></details>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:0">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Kijken of er een tender voor je klaarligt?</h2>
+      <p class="lead">Laat je gegevens achter. We bellen je binnen één werkdag terug, met de tenders die nu openstaan voor jouw specialisme.</p>
+    </div>
+    <form action="https://formsubmit.co/thissyass@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nieuwe aanvraag via Tenderwerk Vastgoed">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://thissyass-cmyk.github.io/tenderwerk-vastgoed/bedankt.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <label>Naam<input name="naam" required autocomplete="name"></label>
+        <label>Bedrijf<input name="bedrijf" required autocomplete="organization"></label>
+      </div>
+      <div class="row">
+        <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
+        <label>Telefoon<input type="tel" name="telefoon" autocomplete="tel"></label>
+      </div>
+      <label>Specialisme
+        <select name="specialisme">
+          <option>Taxaties</option><option>WOZ</option><option>MJOP / conditiemeting</option>
+          <option>Vastgoedadvies</option><option>Onderhoud / verduurzaming</option><option>Anders</option>
+        </select>
+      </label>
+      <label>Bericht (optioneel)<textarea name="bericht" placeholder="Bijvoorbeeld: we zijn benieuwd naar de tender van gemeente Rotterdam."></textarea></label>
+      <div><button class="btn" type="submit">Verstuur</button></div>
+      <p class="small">We gebruiken je gegevens alleen om contact met je op te nemen.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Tenderwerk Vastgoed</span>
+    <span>Tenders schrijven voor taxateurs en vastgoedadviseurs · No cure no pay</span>
+  </div>
+</footer>
+</body>
+</html>
