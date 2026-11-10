@@ -27,7 +27,7 @@
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Tenderbouw","url":"https://thissyass-cmyk.github.io/tenderwerk/","description":"Tenders schrijven voor bouw- en vastgoedbedrijven, op basis van no cure, no pay.","areaServed":"NL","identifier":{"@type":"PropertyValue","propertyID":"KvK","value":"88715450"},"vatID":"NL004634710B11","logo":"https://thissyass-cmyk.github.io/tenderwerk/apple-touch-icon.png","founder":{"@type":"Person","name":"Yasmine Dahhane"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat kost het?", "acceptedAnswer": {"@type": "Answer", "text": "Niets vooraf. Alleen bij gunning betaal je een vast percentage van de opdrachtwaarde, dat we vooraf schriftelijk afspreken. Eén factuur, na ondertekening van het contract."}}, {"@type": "Question", "name": "Hoe groot is mijn kans?", "acceptedAnswer": {"@type": "Answer", "text": "Gemiddeld doen zo'n vier partijen mee, dus je basiskans is ongeveer 25%. Met strenge selectie en een inschrijving die precies op de criteria scoort, is 30 tot 40% realistisch."}}, {"@type": "Question", "name": "Wat als je niet wint?", "acceptedAnswer": {"@type": "Answer", "text": "Dan betaal je niets. Ook niet als de aanbesteding wordt ingetrokken of de gunning niet doorgaat."}}, {"@type": "Question", "name": "Hoeveel tijd kost het mij?", "acceptedAnswer": {"@type": "Answer", "text": "Een gesprek van 20 minuten, je stukken aanleveren (referenties, cv's, certificaten, KvK-uittreksel) en de eindversie tekenen."}}, {"@type": "Question", "name": "Wie maakt de prijs en wie dient in?", "acceptedAnswer": {"@type": "Answer", "text": "Jij maakt de prijs en tekent het UEA en het inschrijvingsbiljet. Het uploaden regel ik met jouw volmacht, of je doet het zelf."}}, {"@type": "Question", "name": "Welke tenders doe je?", "acceptedAnswer": {"@type": "Answer", "text": "Bouw- en vastgoedopdrachten van gemeenten, provincies, waterschappen, scholen en corporaties, vooral via TenderNed. Ik start bij minimaal tien dagen voor de deadline."}}, {"@type": "Question", "name": "Werk je ook voor mijn concurrent?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Per tender schrijf ik voor één inschrijver, en je gegevens blijven vertrouwelijk."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat kost het?", "acceptedAnswer": {"@type": "Answer", "text": "Niets vooraf en geen uurtarief: no cure, no pay. Bij een gewone opdracht 3,5% tot €250.000, 2,5% tot €1 miljoen en 1,5% daarboven. Bij een raamovereenkomst een vast bedrag van €4.500 tot €30.000, afhankelijk van de geraamde waarde. Bedragen exclusief btw, één factuur na ondertekening."}}, {"@type": "Question", "name": "Hoe groot is mijn kans?", "acceptedAnswer": {"@type": "Answer", "text": "Gemiddeld doen zo'n vier partijen mee, dus je basiskans is ongeveer 25%. Met strenge selectie en een inschrijving die precies op de criteria scoort, is 30 tot 40% realistisch."}}, {"@type": "Question", "name": "Wat als je niet wint?", "acceptedAnswer": {"@type": "Answer", "text": "Dan betaal je niets. Ook niet als de aanbesteding wordt ingetrokken of de gunning niet doorgaat."}}, {"@type": "Question", "name": "Hoeveel tijd kost het mij?", "acceptedAnswer": {"@type": "Answer", "text": "Een gesprek van 20 minuten, je stukken aanleveren (referenties, cv's, certificaten, KvK-uittreksel) en de eindversie tekenen."}}, {"@type": "Question", "name": "Wie maakt de prijs en wie dient in?", "acceptedAnswer": {"@type": "Answer", "text": "Jij maakt de prijs en tekent het UEA en het inschrijvingsbiljet. Het uploaden regel ik met jouw volmacht, of je doet het zelf."}}, {"@type": "Question", "name": "Welke tenders doe je?", "acceptedAnswer": {"@type": "Answer", "text": "Bouw- en vastgoedopdrachten van gemeenten, provincies, waterschappen, scholen en corporaties, vooral via TenderNed. Ik start bij minimaal tien dagen voor de deadline."}}, {"@type": "Question", "name": "Werk je ook voor mijn concurrent?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Per tender schrijf ik voor één inschrijver, en je gegevens blijven vertrouwelijk."}}]}
 </script>
 <script>document.documentElement.className+=' js';if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className+=' still'</script>
 <script>if('scrollRestoration' in history)history.scrollRestoration='manual';if(location.hash){history.replaceState(null,'',location.pathname+location.search)}window.scrollTo(0,0);addEventListener('load',function(){window.scrollTo(0,0)});addEventListener('pageshow',function(e){if(e.persisted)window.scrollTo(0,0)});</script>
@@ -577,6 +577,32 @@ form .btn:disabled{opacity:.6;cursor:default}
   .cr .flag{opacity:1;transform:none}
 }
 #player .cap,#screen .cap{display:none!important}
+
+/* price overview in FAQ */
+.price{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 14px 56px}
+.pc{background:var(--bg-2,#f6f5f2);border-radius:12px;padding:18px 18px 16px;display:flex;flex-direction:column}
+.pc.dark{background:#1a1a18;color:#fff}
+.pc-h{padding:0!important;margin:0;font-size:16px;font-weight:500;letter-spacing:-.02em;color:inherit!important;display:flex;align-items:center;gap:10px}
+.pc-h span{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:5px;background:var(--accent);color:#fff;font-size:12px;font-weight:600}
+.pc-s{padding:0!important;margin:4px 0 14px;font-size:13px;color:var(--ink-3,#8a8983)!important}
+.pc.dark .pc-s{color:#a3a29c!important}
+.tiers,.rows{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.tiers li{position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:9px 12px;border-radius:8px;background:#fff;overflow:hidden;font-size:14px;color:var(--ink-2)}
+.tiers li i{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(var(--w))}
+.tiers li b,.rows li b{font-size:20px;font-weight:600;letter-spacing:-.03em;color:var(--accent);font-variant-numeric:tabular-nums}
+.rows li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;color:#cfcec8}
+.rows li:last-child{border-bottom:0}
+.pc.dark .rows li b{color:#fff}
+.pc-f{padding:0!important;margin-top:auto!important;padding-top:12px!important;font-size:12px;color:var(--ink-3,#8a8983)!important;line-height:1.4}
+.pc.dark .pc-f{color:#a3a29c!important}
+.pchips{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 24px 56px;padding:0}
+.pchips li{font-size:12px;padding:5px 10px;border-radius:6px;border:1px solid var(--hair,rgba(26,26,24,.12));color:var(--ink-2)}
+.pchips li:first-child{background:var(--accent);border-color:var(--accent);color:#fff}
+details[open] .tiers li i{animation:tierGrow .9s var(--ease,cubic-bezier(.22,1,.36,1)) both}
+details[open] .tiers li:nth-child(2) i{animation-delay:.1s}
+details[open] .tiers li:nth-child(3) i{animation-delay:.2s}
+@keyframes tierGrow{from{transform:scaleX(0)}to{transform:scaleX(var(--w))}}
+@media (max-width:760px){.price{grid-template-columns:1fr;margin-left:0}.pchips{margin-left:0}}
 </style>
 </head>
 <body>
@@ -937,7 +963,32 @@ form .btn:disabled{opacity:.6;cursor:default}
       <p class="small-q">Andere vraag? <a class="lnk" href="#contact" data-wa target="_blank" rel="noopener">Stuur me een WhatsApp</a>.</p>
     </header>
     <div class="faq reveal d1">
-      <details><summary><span class="qn">01</span><span>Wat kost het?</span><i class="pm" aria-hidden="true"></i></summary><div class="a"><p>Niets vooraf. Alleen bij gunning betaal je een vast percentage van de opdrachtwaarde, dat we vooraf schriftelijk afspreken. Eén factuur, na ondertekening van het contract.</p></div></details>
+      <details open><summary><span class="qn">01</span><span>Wat kost het?</span><i class="pm" aria-hidden="true"></i></summary><div class="a"><p>Niets vooraf en geen uurtarief. Je betaalt alleen als je wint, volgens deze vaste tarieven. Eén factuur, na ondertekening van het contract.</p>
+        <div class="price">
+          <div class="pc">
+            <p class="pc-h"><span>A</span>Gewone opdracht</p>
+            <p class="pc-s">Percentage van de opdrachtwaarde</p>
+            <ul class="tiers">
+              <li><span>tot €250.000</span><b>3,5%</b><i style="--w:1"></i></li>
+              <li><span>€250.000 tot €1 mln</span><b>2,5%</b><i style="--w:.714"></i></li>
+              <li><span>boven €1 mln</span><b>1,5%</b><i style="--w:.429"></i></li>
+            </ul>
+            <p class="pc-f">Berekend per schijf van de opdrachtwaarde</p>
+          </div>
+          <div class="pc dark">
+            <p class="pc-h"><span>B</span>Raamovereenkomst</p>
+            <p class="pc-s">Vast bedrag op de geraamde waarde</p>
+            <ul class="rows">
+              <li><span>tot €250.000</span><b>€4.500</b></li>
+              <li><span>€250.000 tot €1 mln</span><b>€10.000</b></li>
+              <li><span>€1 mln tot €5 mln</span><b>€20.000</b></li>
+              <li><span>boven €5 mln</span><b>€30.000</b></li>
+            </ul>
+            <p class="pc-f">Nooit meer dan 4% van de geraamde waarde · 60% bij meerdere winnaars</p>
+          </div>
+        </div>
+        <ul class="pchips"><li>€0 vooraf</li><li>Niet gewonnen? €0</li><li>Per gewonnen perceel</li><li>Verlenging zonder extra kosten</li><li>Bedragen excl. btw</li></ul>
+      </div></details>
       <details><summary><span class="qn">02</span><span>Hoe groot is mijn kans?</span><i class="pm" aria-hidden="true"></i></summary><div class="a"><p>Gemiddeld doen zo&#x27;n vier partijen mee, dus je basiskans is ongeveer 25%. Met strenge selectie en een inschrijving die precies op de criteria scoort, is 30 tot 40% realistisch.</p></div></details>
       <details><summary><span class="qn">03</span><span>Wat als je niet wint?</span><i class="pm" aria-hidden="true"></i></summary><div class="a"><p>Dan betaal je niets. Ook niet als de aanbesteding wordt ingetrokken of de gunning niet doorgaat.</p></div></details>
       <details><summary><span class="qn">04</span><span>Hoeveel tijd kost het mij?</span><i class="pm" aria-hidden="true"></i></summary><div class="a"><p>Een gesprek van 20 minuten, je stukken aanleveren (referenties, cv&#x27;s, certificaten, KvK-uittreksel) en de eindversie tekenen.</p></div></details>
