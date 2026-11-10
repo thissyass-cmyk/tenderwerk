@@ -355,6 +355,108 @@ footer a:hover{color:var(--ink)}
 .fbottom{display:block!important;margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:12px}
 @media (max-width:760px){.fcols{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}}
 
+
+/* explainer video */
+#video{padding-bottom:clamp(60px,8vw,100px)}
+.player{max-width:960px;margin:56px auto 0;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 40px 80px -40px rgba(0,0,0,.35);text-align:left}
+.screen{position:relative;aspect-ratio:16/9;container-type:inline-size;background:radial-gradient(120% 90% at 80% 0%,#e9f7f0 0%,#f5f5f7 45%,#fbfbfd 100%);overflow:hidden}
+.vs{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility 0s .45s}
+.vs.on{opacity:1;visibility:visible;transition:opacity .45s var(--ease)}
+.v-center{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-bottom:6cqw}
+.v-split{height:100%;display:grid;grid-template-columns:1fr 1.1fr;gap:4cqw;align-items:center;padding:0 6cqw 7cqw}
+.v-logo{width:11cqw;height:11cqw;margin-bottom:2.4cqw;filter:drop-shadow(0 1.2cqw 2cqw rgba(10,124,90,.3))}
+.v-big{font-size:5.2cqw;font-weight:600;letter-spacing:-.045em;line-height:1.05}
+.v-big b{color:var(--accent);font-weight:600}
+.v-small{font-size:2cqw;color:var(--ink-2);margin-top:1.2cqw}
+.v-step{display:inline-block;font-size:1.5cqw;font-weight:600;color:var(--accent);background:#e3f4ec;border-radius:980px;padding:.5cqw 1.2cqw;margin-bottom:1.6cqw}
+.v-title{font-size:4.4cqw;font-weight:600;letter-spacing:-.04em;line-height:1.06}
+.v-card,.v-doc{position:relative;background:#fff;border-radius:2cqw;padding:2.2cqw;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 2cqw 5cqw -2cqw rgba(0,0,0,.2)}
+.v-row{display:flex;justify-content:space-between;align-items:center;gap:1cqw;font-size:1.65cqw;padding:1.3cqw 1cqw;border-radius:1cqw}
+.v-row+.v-row{border-top:1px solid #f0f0f3}
+.v-pill{font-style:normal;font-size:1.3cqw;font-weight:600;border-radius:980px;padding:.4cqw 1cqw;white-space:nowrap}
+.v-pill.ok{background:#e3f4ec;color:var(--accent)}
+.v-pill.no{background:#f2f2f4;color:var(--ink-3)}
+.v-lens{position:absolute;width:6cqw;height:6cqw;left:8%;top:10%;pointer-events:none}
+.v-call{display:flex;align-items:center;gap:1.2cqw;font-size:1.8cqw;padding-bottom:1.4cqw;border-bottom:1px solid #f0f0f3;margin-bottom:.6cqw}
+.v-ring{display:grid;place-items:center;width:4.4cqw;height:4.4cqw;border-radius:50%;background:#e3f4ec}
+.v-ring svg{width:2.2cqw;height:2.2cqw;fill:var(--accent)}
+.v-timer{margin-left:auto;font-size:1.4cqw;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.v-tick{display:flex;align-items:center;gap:1.2cqw;font-size:1.75cqw;padding:1cqw 0}
+.v-tick i{width:2.4cqw;height:2.4cqw;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10'%3E%3Cpath d='M1 5l3.5 3.5L11 1' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/55% no-repeat;flex:none}
+.v-doc{min-height:26cqw;padding-bottom:5.5cqw}
+.v-h{font-size:1.7cqw;font-weight:600;margin:1.4cqw 0 .6cqw}
+.v-h:first-child{margin-top:0}
+.v-ln{display:block;height:.9cqw;border-radius:1cqw;background:#e5e5ea;margin:.7cqw 0;transform-origin:0 50%;transform:scaleX(var(--w))}
+.v-badge,.v-stamp{position:absolute;right:2cqw;bottom:2cqw;font-size:1.4cqw;font-weight:600;border-radius:980px;padding:.6cqw 1.3cqw;background:#e3f4ec;color:var(--accent)}
+.v-stamp{font-size:2cqw;text-transform:uppercase;letter-spacing:.06em;border-radius:.8cqw;background:transparent;border:.3cqw solid var(--accent);transform:rotate(-8deg);right:3cqw;bottom:3cqw}
+.v-sign{display:block;width:60%;margin-top:2cqw}
+.v-win{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center}
+.v-win .v-big{font-size:4.4cqw;margin-top:2cqw}
+.v-medal{position:relative;z-index:1;display:grid;place-items:center;width:10cqw;height:10cqw;border-radius:50%;background:var(--accent);box-shadow:0 1.5cqw 3cqw -1cqw rgba(10,124,90,.5)}
+.v-medal svg{width:4.6cqw;height:4.6cqw}
+.v-wave{position:absolute;top:0;left:50%;width:10cqw;height:10cqw;margin-left:-5cqw;border-radius:50%;border:.3cqw solid var(--accent);opacity:0}
+.cap{position:absolute;left:0;right:0;margin:0 auto;width:fit-content;bottom:2.4cqw;max-width:82%;text-align:center;font-size:1.75cqw;line-height:1.35;color:#fff;background:rgba(29,29,31,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:.8cqw 1.6cqw;border-radius:1cqw;transition:opacity .3s}
+.cap:empty{opacity:0}
+.ctrl{display:flex;align-items:center;gap:14px;padding:12px 16px;background:#fff;border-top:1px solid #f0f0f3}
+.ctrl button{all:unset;cursor:pointer;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--bg-2);flex:none}
+.ctrl button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ctrl svg{width:16px;height:16px;fill:var(--ink)}
+.player .i-play{display:none}.player.paused .i-play{display:block}.player.paused .i-pause{display:none}
+.segs{flex:1;display:flex;gap:5px}
+.segs button{all:unset;cursor:pointer;flex:1;height:5px;border-radius:5px;background:#e5e5ea;position:relative;overflow:hidden}
+.segs button i{position:absolute;inset:0;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
+.vtime{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+/* scene animations: only while the scene is on */
+.vs.on .v-in{animation:vIn .7s var(--ease) var(--d,0s) both}
+.vs.on .v-row{animation:vIn .5s var(--ease) var(--d) both}
+.vs.on .v-hit{animation:vIn .5s var(--ease) var(--d) both,vHit .5s ease 3.4s both}
+.vs.on .v-pill{animation:vPop .45s cubic-bezier(.3,1.6,.5,1) var(--d) both}
+.vs.on .v-lens{animation:vLens 3.2s var(--ease) .8s both}
+.vs.on .v-tick{animation:vIn .45s var(--ease) var(--d) both}
+.vs.on .v-tick i{animation:vPop .4s cubic-bezier(.3,1.6,.5,1) calc(var(--d) + .25s) both}
+.vs.on .v-ring{animation:vShake 1.2s ease .4s 2}
+.vs.on .v-h{animation:vIn .45s var(--ease) var(--d) both}
+.vs.on .v-ln{animation:vLine .7s var(--ease) var(--d) both}
+.vs.on .v-badge{animation:vPop .5s cubic-bezier(.3,1.6,.5,1) var(--d) both}
+.vs.on .v-stamp{animation:vStamp .5s cubic-bezier(.3,1.6,.5,1) var(--d) both}
+.vs.on .v-draw{stroke-dasharray:var(--len);animation:vDraw var(--t,.8s) var(--ease) var(--d) both}
+.vs.on .v-medal{animation:vPop .6s cubic-bezier(.3,1.6,.5,1) var(--d) both}
+.vs.on .v-wave{animation:vWave 1.6s ease-out var(--d) 2}
+.player.paused .vs *, .player.paused .vs{animation-play-state:paused!important}
+@keyframes vIn{from{opacity:0;transform:translateY(2cqw)}to{opacity:1;transform:none}}
+@keyframes vPop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+@keyframes vStamp{from{opacity:0;transform:rotate(-8deg) scale(2.2)}to{opacity:1;transform:rotate(-8deg) scale(1)}}
+@keyframes vLine{from{transform:scaleX(0)}to{transform:scaleX(var(--w))}}
+@keyframes vDraw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+@keyframes vHit{to{background:#e3f4ec;box-shadow:inset 0 0 0 2px #0a7c5a}}
+@keyframes vLens{0%{transform:translate(0,0)}30%{transform:translate(18cqw,4cqw)}55%{transform:translate(4cqw,9cqw)}80%,100%{transform:translate(20cqw,5.4cqw)}}
+@keyframes vShake{0%,50%,100%{transform:rotate(0)}10%,30%{transform:rotate(-12deg)}20%,40%{transform:rotate(12deg)}}
+@keyframes vWave{from{opacity:.6;transform:scale(1)}to{opacity:0;transform:scale(2.2)}}
+@media (max-width:640px){.player{border-radius:16px;margin-top:40px}.cap{font-size:2.6cqw;bottom:2cqw;max-width:92%}.ctrl{gap:10px;padding:10px 12px}}
+
+
+/* explainer video on phones: taller and stacked */
+@media (max-width:640px){.screen{aspect-ratio:4/5}}
+@container (max-width:600px){
+  .v-split{grid-template-columns:1fr;align-content:center;gap:6cqw;padding:4cqw 7cqw 26cqw}
+  .v-center{padding-bottom:18cqw}
+  .v-title{font-size:8.4cqw}.v-step{font-size:3.4cqw;padding:1cqw 2.6cqw}
+  .v-card,.v-doc{border-radius:4cqw;padding:4.5cqw}
+  .v-row,.v-tick,.v-call{font-size:3.8cqw}.v-row{padding:2.4cqw 1.6cqw}
+  .v-pill{font-size:3cqw;padding:.8cqw 2cqw}
+  .v-h{font-size:3.9cqw;margin:2.6cqw 0 1cqw}.v-ln{height:1.8cqw;margin:1.4cqw 0}
+  .v-doc{min-height:0;padding-bottom:12cqw}
+  .v-badge{font-size:3cqw;padding:1.2cqw 2.6cqw;right:4cqw;bottom:4cqw}.v-stamp{font-size:4.2cqw;right:5cqw;bottom:5cqw}
+  .v-ring{width:9cqw;height:9cqw}.v-ring svg{width:4.4cqw;height:4.4cqw}.v-timer{font-size:3.2cqw}
+  .v-tick i{width:5cqw;height:5cqw}.v-tick{padding:2cqw 0}
+  .v-big{font-size:9.5cqw}.v-small{font-size:4.2cqw;margin-top:2cqw}.v-logo{width:22cqw;height:22cqw;margin-bottom:5cqw}
+  .v-medal{width:20cqw;height:20cqw}.v-medal svg{width:9cqw;height:9cqw}.v-wave{width:20cqw;height:20cqw;margin-left:-10cqw}.v-win .v-big{font-size:8.5cqw}
+  .v-lens{width:11cqw;height:11cqw}
+  .v-sign{width:75%}
+  .cap{font-size:3.8cqw;bottom:4cqw;max-width:90%;padding:2cqw 3.4cqw;border-radius:2.4cqw}
+  .vs .btn{font-size:4cqw;margin-top:6cqw!important}
+}
+
 /* reveal */
 .js .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .reveal.in{opacity:1;transform:none}
@@ -442,6 +544,102 @@ footer a:hover{color:var(--ink)}
   </div>
 </section>
 
+
+
+<section class="center" id="video">
+  <div class="wrap">
+    <p class="eyebrow reveal">In 45 seconden</p>
+    <h2 class="reveal d1">Zo werken we.</h2>
+    <p class="sub reveal d2" style="margin-top:20px">Van de eerste tender tot de gunning, in vijf stappen.</p>
+    <div class="player reveal d2" id="player" aria-label="Animatie: zo werkt Tenderwerk">
+      <div class="screen" id="screen">
+
+        <div class="vs" data-dur="5000" data-cap="In vijf stappen van tender naar opdracht.">
+          <div class="v-center">
+            <svg class="v-logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#0a7c5a"/><path class="v-draw" style="--len:50;--d:.3s" d="M14 30L32 15l18 15" stroke="#fff" stroke-width="4.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path class="v-draw" style="--len:32;--d:.9s" d="M22.5 38.5l6.5 6.5 13-14" stroke="#fff" stroke-width="4.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="v-big v-in" style="--d:.6s">Zo werkt Tender<b>werk</b></p>
+            <p class="v-small v-in" style="--d:1s">Tenders voor bouw- en vastgoedbedrijven</p>
+          </div>
+        </div>
+
+        <div class="vs" data-dur="7500" data-cap="Elke week staan er honderden tenders open. Wij kiezen alleen de opdrachten waar jij echt kans maakt.">
+          <div class="v-split">
+            <div class="v-text"><span class="v-step v-in">Stap 1 van 5</span><p class="v-title v-in" style="--d:.15s">We zoeken de tender</p></div>
+            <div class="v-card v-in" style="--d:.3s">
+              <div class="v-row" style="--d:.5s"><span>Taxatiediensten gemeente</span><em class="v-pill no" style="--d:3.2s">Niet passend</em></div>
+              <div class="v-row v-hit" style="--d:.65s"><span>WOZ-waardering waterschap</span><em class="v-pill ok" style="--d:3.6s">Past bij jou</em></div>
+              <div class="v-row" style="--d:.8s"><span>Onderhoud schoolgebouwen</span><em class="v-pill no" style="--d:3.4s">Te krap</em></div>
+              <div class="v-row" style="--d:.95s"><span>Renovatie gemeentehuis</span><em class="v-pill no" style="--d:3.8s">Niet passend</em></div>
+              <svg class="v-lens" viewBox="0 0 40 40" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="rgba(255,255,255,.35)" stroke="#1d1d1f" stroke-width="3"/><path d="M24 24l11 11" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs" data-dur="7500" data-cap="In één kort gesprek halen we op wat we nodig hebben. Meer tijd kost het jou niet.">
+          <div class="v-split">
+            <div class="v-text"><span class="v-step v-in">Stap 2 van 5</span><p class="v-title v-in" style="--d:.15s">We bellen 20 minuten</p></div>
+            <div class="v-card v-in" style="--d:.3s">
+              <div class="v-call"><span class="v-ring"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><b>Belgesprek</b><span class="v-timer">20 min</span></div>
+              <div class="v-tick" style="--d:1.2s"><i></i>Referentieprojecten</div>
+              <div class="v-tick" style="--d:2s"><i></i>Certificaten</div>
+              <div class="v-tick" style="--d:2.8s"><i></i>Cv's van het team</div>
+              <div class="v-tick" style="--d:3.6s"><i></i>Jouw aanpak</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs" data-dur="8000" data-cap="Wij schrijven alles, precies op de gunningscriteria en in de taal van de beoordelaar.">
+          <div class="v-split">
+            <div class="v-text"><span class="v-step v-in">Stap 3 van 5</span><p class="v-title v-in" style="--d:.15s">Wij schrijven de inschrijving</p></div>
+            <div class="v-doc v-in" style="--d:.3s">
+              <p class="v-h" style="--d:.7s">Plan van aanpak</p><i class="v-ln" style="--d:1s;--w:.95"></i><i class="v-ln" style="--d:1.2s;--w:.8"></i>
+              <p class="v-h" style="--d:1.7s">Kwaliteit</p><i class="v-ln" style="--d:2s;--w:.9"></i><i class="v-ln" style="--d:2.2s;--w:.6"></i>
+              <p class="v-h" style="--d:2.7s">Planning en risico's</p><i class="v-ln" style="--d:3s;--w:.85"></i><i class="v-ln" style="--d:3.2s;--w:.7"></i>
+              <span class="v-badge" style="--d:4.2s">Binnen de paginalimiet</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs" data-dur="6500" data-cap="Jij leest mee, tekent wat getekend moet worden en de inschrijving gaat de deur uit.">
+          <div class="v-split">
+            <div class="v-text"><span class="v-step v-in">Stap 4 van 5</span><p class="v-title v-in" style="--d:.15s">Jij keurt goed en tekent</p></div>
+            <div class="v-doc v-in" style="--d:.3s">
+              <p class="v-h" style="--d:0s">Inschrijvingsbiljet</p><i class="v-ln" style="--d:0s;--w:.9"></i><i class="v-ln" style="--d:0s;--w:.75"></i><i class="v-ln" style="--d:0s;--w:.82"></i>
+              <svg class="v-sign" viewBox="0 0 200 60" aria-hidden="true"><path class="v-draw" style="--len:400;--d:1.1s;--t:1.4s" d="M8 42c14-30 22-30 18 0s14-26 22-14 6 18 16 4 10-20 18-6 4 16 16 2 12-12 22-4 20-6 40-10" stroke="#1d1d1f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 52h188" stroke="#c7c7cc" stroke-width="2"/></svg>
+              <span class="v-stamp" style="--d:3s">Ingediend</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs" data-dur="6500" data-cap="Win je niet, dan betaal je niets. Wij lopen het risico.">
+          <div class="v-split">
+            <div class="v-text"><span class="v-step v-in">Stap 5 van 5</span><p class="v-title v-in" style="--d:.15s">Gegund? Pas dan betaal je.</p></div>
+            <div class="v-win">
+              <span class="v-wave" style="--d:.9s"></span><span class="v-wave" style="--d:1.3s"></span>
+              <span class="v-medal" style="--d:.5s"><svg viewBox="0 0 26 20" aria-hidden="true"><path class="v-draw" style="--len:40;--d:1.1s" d="M2 10l7 7L24 2" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <p class="v-big v-in" style="--d:1.6s">No cure, no pay</p>
+              <p class="v-small v-in" style="--d:2s">€0 vooraf</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs" data-dur="5500" data-cap="">
+          <div class="v-center">
+            <p class="v-big v-in" style="--d:.2s">Ligt er een tender<br>voor jou klaar?</p>
+            <a class="btn v-in" style="--d:.7s;margin-top:3cqw" href="#contact">Neem contact op</a>
+          </div>
+        </div>
+
+        <p class="cap" id="cap" aria-live="polite"></p>
+      </div>
+      <div class="ctrl">
+        <button type="button" id="pp" aria-label="Pauzeren"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z"/><path class="i-play" d="M8 5v14l11-7z"/></svg></button>
+        <div class="segs" id="segs"></div>
+        <span class="vtime" id="vt">0:00</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="build center" id="van-tender-tot-gegund">
   <div class="wrap">
@@ -816,6 +1014,29 @@ footer a:hover{color:var(--ink)}
       setTimeout(function(){ location.href='bedankt.html' }, 6000);
     });
   }
+
+
+  /* explainer video player */
+  (function(){
+    var pl=$('#player'); if(!pl) return;
+    var sc=$$('.vs',pl), cap=$('#cap'), segs=$('#segs'), pp=$('#pp'), vt=$('#vt');
+    var dur=sc.map(function(e){return +e.getAttribute('data-dur')}), total=dur.reduce(function(a,b){return a+b},0);
+    var starts=[]; dur.reduce(function(a,b,i){starts[i]=a;return a+b},0);
+    sc.forEach(function(e,i){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Ga naar deel '+(i+1)); b.innerHTML='<i></i>'; b.addEventListener('click',function(){seek(starts[i]); play()}); segs.appendChild(b) });
+    var bars=$$('i',segs), t=0, cur=-1, playing=false, last=0, inView=false, userPaused=false;
+    function show(i){ if(i===cur) return; cur=i; sc.forEach(function(e,j){ e.classList.remove('on') }); void pl.offsetWidth; sc[i].classList.add('on'); cap.textContent=sc[i].getAttribute('data-cap')||'' }
+    function idx(tt){ for(var i=dur.length-1;i>=0;i--) if(tt>=starts[i]) return i; return 0 }
+    function paint(){ var i=idx(t); show(i); bars.forEach(function(b,j){ b.style.transform='scaleX('+(j<i?1:j>i?0:(t-starts[i])/dur[i])+')' }); var sct=Math.floor(t/1000); vt.textContent=Math.floor(sct/60)+':'+('0'+sct%60).slice(-2) }
+    function seek(x){ t=x; cur=-1; paint() }
+    function loop(now){ if(!playing) return; t+=Math.min(100, now-last); last=now; if(t>=total){ t=0; cur=-1 } paint(); requestAnimationFrame(loop) }
+    function play(){ if(playing) return; playing=true; pl.classList.remove('paused'); pp.setAttribute('aria-label','Pauzeren'); last=performance.now(); requestAnimationFrame(loop) }
+    function pause(){ playing=false; pl.classList.add('paused'); pp.setAttribute('aria-label','Afspelen') }
+    pp.addEventListener('click',function(){ if(playing){ userPaused=true; pause() } else { userPaused=false; play() } });
+    seek(0);
+    if(still){ pause(); return }
+    pause();
+    if(hasIO){ new IntersectionObserver(function(es){ es.forEach(function(e){ inView=e.isIntersecting; if(inView && !userPaused) play(); else if(!inView) pause() }) },{threshold:.45}).observe(pl) } else play();
+  })();
 
   /* spotlight cards */
   $$('.sector').forEach(function(c){
