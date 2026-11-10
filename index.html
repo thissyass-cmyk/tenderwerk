@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tenderwerk · Tenders schrijven voor bedrijven in de bouw</title>
-<meta name="description" content="Tenderwerk schrijft aanbestedingen voor bedrijven in de bouw: aannemers, installateurs, infra, onderhoud en taxateurs. No cure, no pay.">
+<title>Tenderwerk · Tenders schrijven voor bouw- en vastgoedbedrijven</title>
+<meta name="description" content="Tenderwerk schrijft aanbestedingen voor bouw- en vastgoedbedrijven: aannemers, installateurs, infra, taxateurs en vastgoedbeheerders. No cure, no pay.">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tenderwerk · Jij bouwt. Wij schrijven de tender.">
-<meta property="og:description" content="Tenders schrijven voor bedrijven in de bouw. No cure, no pay.">
+<meta property="og:title" content="Tenderwerk · Jij doet het vak. Wij schrijven de tender.">
+<meta property="og:description" content="Tenders schrijven voor bouw- en vastgoedbedrijven. No cure, no pay.">
 <meta property="og:url" content="https://thissyass-cmyk.github.io/tenderwerk/">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:image" content="https://thissyass-cmyk.github.io/tenderwerk/og.png">
@@ -22,7 +22,7 @@
 <link rel="icon" type="image/svg+xml" href="logo/mark.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tenderwerk","url":"https://thissyass-cmyk.github.io/tenderwerk/","description":"Tenders schrijven voor bedrijven in de bouw, op basis van no cure, no pay.","areaServed":"NL","logo":"https://thissyass-cmyk.github.io/tenderwerk/apple-touch-icon.png","founder":{"@type":"Person","name":"Yasmine Dahhane"}}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tenderwerk","url":"https://thissyass-cmyk.github.io/tenderwerk/","description":"Tenders schrijven voor bouw- en vastgoedbedrijven, op basis van no cure, no pay.","areaServed":"NL","logo":"https://thissyass-cmyk.github.io/tenderwerk/apple-touch-icon.png","founder":{"@type":"Person","name":"Yasmine Dahhane"}}
 </script>
 <script>document.documentElement.className+=' js';if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className+=' still'</script>
 <style>
@@ -49,11 +49,10 @@ h2{font-size:clamp(34px,5.2vw,56px);letter-spacing:-.04em}
 h3{font-size:24px;line-height:1.16;letter-spacing:-.025em}
 .sub{font-size:clamp(19px,2.2vw,24px);line-height:1.33;color:var(--ink-2);max-width:720px;letter-spacing:-.02em}
 .center .sub{margin-left:auto;margin-right:auto}
-.mono{font:500 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:2px;margin-bottom:18px}
+.eyebrow{font-size:clamp(17px,1.8vw,21px);font-weight:600;color:var(--accent);margin-bottom:12px;letter-spacing:-.02em}
 .mono .cur{display:inline-block;width:.6em;height:1.15em;background:currentColor;margin-left:4px;animation:blink 1.1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.grad{background:linear-gradient(90deg,#0a7c5a,#1c9c74 40%,#0b6e8a 70%,#0a7c5a);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 8s linear infinite}
-@keyframes sheen{to{background-position:-200% 0}}
+.grad{color:var(--accent)}
 
 /* scroll progress */
 .progress{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),var(--mint));z-index:60}
@@ -94,7 +93,7 @@ h3{font-size:24px;line-height:1.16;letter-spacing:-.025em}
 .bar>span{width:12px;height:12px;border-radius:50%}
 .bar>span:nth-child(1){background:#ff5f57}.bar>span:nth-child(2){background:#febc2e}.bar>span:nth-child(3){background:#28c840}
 .bar em{margin-left:12px;font-style:normal;font-size:13px;color:var(--ink-3)}
-.scan{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;font:13px var(--mono);color:var(--ink-2);border-bottom:1px solid #f0f0f3;background:#fcfcfd}
+.scan{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;font:14px var(--font);color:var(--ink-2);border-bottom:1px solid #f0f0f3;background:#fcfcfd}
 .scan b{color:var(--ink);font-weight:500}
 .scan .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:8px;box-shadow:0 0 0 0 rgba(10,124,90,.5);animation:ping 1.6s infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(10,124,90,.45)}100%{box-shadow:0 0 0 10px rgba(10,124,90,0)}}
@@ -127,7 +126,7 @@ section{padding:clamp(88px,12vw,140px) 0}
 /* steps: GitHub-style accordion + panel */
 .night{background:var(--night);color:var(--night-ink);position:relative;overflow:hidden}
 .night .sub{color:var(--night-ink-2)}
-.night .mono{color:var(--mint)}
+.night .eyebrow{color:var(--mint)}
 .night::before{content:"";position:absolute;left:50%;top:-30%;width:900px;height:600px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(61,220,151,.16),transparent);pointer-events:none}
 .flow{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;margin-top:64px;align-items:start;position:relative}
 .steps{list-style:none;border-left:1px solid var(--night-line)}
@@ -138,17 +137,22 @@ section{padding:clamp(88px,12vw,140px) 0}
 @keyframes fill{to{transform:scaleY(1)}}
 .steps button{all:unset;display:flex;gap:14px;align-items:baseline;font-size:21px;font-weight:600;letter-spacing:-.02em;color:var(--night-ink-2);transition:color .3s;cursor:pointer}
 .steps button:focus-visible{outline:2px solid var(--mint);outline-offset:6px;border-radius:4px}
-.steps button span{font:500 13px var(--mono);color:#6e7681}
+.steps button span{font:600 14px var(--font);color:#6e7681}
 .steps li.on button{color:var(--night-ink)}
 .steps li.on button span{color:var(--mint)}
 .steps p{color:var(--night-ink-2);font-size:16px;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s var(--ease),opacity .4s,margin .5s;margin-top:0}
 .steps li.on p{max-height:140px;opacity:1;margin-top:10px}
-.steps .you{display:inline-block;margin-left:10px;font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint);border:1px solid rgba(61,220,151,.4);border-radius:980px;padding:3px 8px;vertical-align:middle}
+.steps .you{display:inline-block;margin-left:10px;font:600 12px var(--font);color:var(--mint);border:1px solid rgba(61,220,151,.4);border-radius:980px;padding:3px 8px;vertical-align:middle}
 .panel{position:relative;background:var(--night-2);border:1px solid var(--night-line);border-radius:16px;min-height:380px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
-.panel .head{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--night-line);font:12px var(--mono);color:var(--night-ink-2)}
+.panel .head{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--night-line);font:13px var(--font);color:var(--night-ink-2)}
 .panel .head i{width:10px;height:10px;border-radius:50%;background:#30363d}
-.scene{position:absolute;inset:45px 0 0;padding:22px 24px;opacity:0;transform:translateY(12px) scale(.985);transition:opacity .5s var(--ease),transform .6s var(--ease);pointer-events:none;font:14px/1.7 var(--mono);color:var(--night-ink)}
+.scene{position:absolute;inset:45px 0 0;padding:14px 24px;opacity:0;transform:translateY(12px) scale(.985);transition:opacity .5s var(--ease),transform .6s var(--ease);pointer-events:none;font:15px/1.6 var(--font);color:var(--night-ink)}
 .scene.on{opacity:1;transform:none;pointer-events:auto}
+.hit{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--night-line);font-family:var(--font)}
+.hit strong{display:block;font-weight:600;font-size:15px}
+.hit small{color:var(--night-ink-2);font-size:13px}
+.hit em{font-style:normal;font-size:12px;font-weight:600;padding:4px 10px;border-radius:980px;background:#21262d;color:var(--night-ink-2);white-space:nowrap}
+.hit em.ok{background:rgba(61,220,151,.14);color:var(--mint)}
 .scene .c{color:#6e7681}.scene .g{color:var(--mint)}.scene .y{color:#e3b341}.scene .b{color:#79c0ff}
 .scene .ln{opacity:0;transform:translateX(-6px);transition:opacity .35s,transform .35s var(--ease)}
 .scene.on .ln{opacity:1;transform:none;transition-delay:calc(var(--i) * 180ms + .15s)}
@@ -162,7 +166,7 @@ section{padding:clamp(88px,12vw,140px) 0}
 .doc h4{font-size:17px;margin-bottom:8px;letter-spacing:-.02em}
 .doc .bar2{height:9px;border-radius:5px;background:#30363d;margin:10px 0;transform-origin:0 50%;transform:scaleX(0);transition:transform .8s var(--ease)}
 .scene.on .doc .bar2{transform:scaleX(var(--w));transition-delay:calc(var(--i) * 200ms + .3s)}
-.doc .score{display:flex;justify-content:space-between;font:13px var(--mono);color:var(--night-ink-2);margin-top:18px;padding-top:14px;border-top:1px solid var(--night-line)}
+.doc .score{display:flex;justify-content:space-between;font:13px var(--font);color:var(--night-ink-2);margin-top:18px;padding-top:14px;border-top:1px solid var(--night-line)}
 .doc .score b{color:var(--mint);font-weight:500}
 .win{display:grid;place-items:center;text-align:center;height:100%;padding-bottom:30px;font-family:var(--font)}
 .win .badge{width:72px;height:72px;border-radius:50%;background:rgba(61,220,151,.12);display:grid;place-items:center;margin:0 auto 18px;transform:scale(.5);opacity:0;transition:transform .7s cubic-bezier(.3,1.6,.5,1) .2s,opacity .3s .2s}
@@ -187,14 +191,14 @@ section{padding:clamp(88px,12vw,140px) 0}
 .sector.focus svg{stroke:var(--mint)}
 .sector.focus::before{background:radial-gradient(260px circle at var(--x) var(--y),rgba(61,220,151,.8),transparent 60%)}
 .sector.focus::after{background:radial-gradient(320px circle at var(--x) var(--y),rgba(61,220,151,.1),transparent 60%)}
-.tag{display:inline-block;margin-top:18px;font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint);border:1px solid rgba(61,220,151,.5);border-radius:980px;padding:4px 10px}
+.tag{display:inline-block;margin-top:18px;font:600 12px var(--font);color:var(--mint);border:1px solid rgba(61,220,151,.5);border-radius:980px;padding:4px 10px}
 
 /* ncnp with contribution grid */
 .zero{position:relative;background:#000;color:#f5f5f7;overflow:hidden}
 .zero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.38;-webkit-mask-image:radial-gradient(ellipse at center,transparent 25%,#000 75%);mask-image:radial-gradient(ellipse at center,transparent 25%,#000 75%)}
 .zero .wrap{position:relative}
 .zero .sub{color:#a1a1a6}
-.zero .mono{color:var(--mint)}
+.zero .eyebrow{color:var(--mint)}
 .huge{font-size:clamp(64px,13vw,172px);font-weight:700;letter-spacing:-.06em;line-height:.95;margin:6px 0 12px;font-variant-numeric:tabular-nums}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:80px;text-align:left}
 .three div{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:28px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
@@ -304,9 +308,25 @@ footer a{color:var(--ink-2)}
 @keyframes ring{0%,40%,100%{transform:rotate(0)}5%,15%,25%{transform:rotate(-14deg)}10%,20%,30%{transform:rotate(14deg)}}
 @keyframes wave{0%{transform:scale(1);opacity:.5}40%{transform:scale(1.7);opacity:0}100%{opacity:0}}
 
+
+/* about me */
+.me{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.photo{position:relative;margin:0}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:50% 30%;border-radius:32px;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.photo figcaption{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(255,255,255,.78);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-radius:16px;padding:12px 16px;display:flex;flex-direction:column;line-height:1.3}
+.photo figcaption strong{font-size:16px}
+.photo figcaption span{font-size:13px;color:var(--ink-2)}
+.me .quote{margin:0;text-align:left;font-size:clamp(28px,3.6vw,42px)}
+.me .aboutcopy{margin:28px 0 0;text-align:left;max-width:560px}
+.direct{display:flex;align-items:center;gap:14px;margin-top:28px;padding:14px 18px 14px 14px;background:#fff;border-radius:18px;max-width:380px}
+.direct img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+.direct strong{display:block;font-size:16px}
+.direct span{font-size:14px;color:var(--ink-2)}
+@media (max-width:900px){.me{grid-template-columns:1fr;gap:40px}.photo{max-width:420px}}
+
 /* reveal */
-.js .reveal{opacity:0;transform:translateY(30px);filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease)}
-.js .reveal.in{opacity:1;transform:none;filter:none}
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
 .d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}
 .still .reveal,.still .reveal.in{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important}}
@@ -354,11 +374,10 @@ footer a{color:var(--ink-2)}
 <main id="top">
 
 <section class="hero" style="padding-bottom:0">
-  <canvas class="grid" data-grid="light" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="mono reveal"><span data-type="Tenderschrijven voor de bouw">Tenderschrijven voor de bouw</span><span class="cur"></span></p>
-    <h1 class="reveal d1">Jij bouwt.<br><span class="grad">Wij schrijven de tender.</span></h1>
-    <p class="sub reveal d2">We vinden de aanbestedingen die bij je passen en schrijven de hele inschrijving. No cure, no pay.</p>
+    <p class="eyebrow reveal">Tenders voor bouw en vastgoed</p>
+    <h1 class="reveal d1">Jij doet het vak.<br><span class="grad">Wij schrijven de tender.</span></h1>
+    <p class="sub reveal d2">Voor aannemers, installateurs, taxateurs en vastgoedbeheerders. We zoeken de aanbestedingen die bij je passen en schrijven de hele inschrijving. No cure, no pay.</p>
     <div class="ctas reveal d3">
       <a class="btn" href="#contact">Plan een belafspraak</a>
       <a class="more" href="#werkwijze">Zo werkt het</a>
@@ -368,7 +387,7 @@ footer a{color:var(--ink-2)}
   <div class="stage" aria-hidden="true">
     <div class="window" id="win">
       <div class="bar"><span></span><span></span><span></span><em>Open tenders voor jouw vakgebied</em></div>
-      <div class="scan" id="scan"><span><span class="dot"></span><span id="scanText">TenderNed doorzoeken</span></span><span><b id="scanN">0</b><span class="hide-s"> bouwtenders</span></span></div>
+      <div class="scan" id="scan"><span><span class="dot"></span><span id="scanText">TenderNed bekijken</span></span><span><b id="scanN">0</b><span class="hide-s"> tenders</span></span></div>
       <div class="meter"><i id="meter"></i></div>
       <div class="list">
         <div class="item" style="--d:0s"><strong>Taxatiediensten gemeente Rotterdam</strong><small>Raamovereenkomst tot 2031 · sluit 1 februari 2027</small><span class="pill go">Topkans</span></div>
@@ -382,10 +401,10 @@ footer a{color:var(--ink-2)}
 
 <section class="gray">
   <div class="wrap center">
-    <p class="mono reveal">Er ligt meer werk klaar dan je denkt</p>
-    <h2 class="reveal d1">Honderden bouwtenders.<br>Elke week.</h2>
+    <p class="eyebrow reveal">Er ligt meer werk klaar dan je denkt</p>
+    <h2 class="reveal d1">Honderden tenders.<br>Elke week.</h2>
     <div class="stats">
-      <div class="stat reveal"><strong data-count="430" data-suffix="+">430+</strong><span>open bouwtenders op TenderNed</span></div>
+      <div class="stat reveal"><strong data-count="430" data-suffix="+">430+</strong><span>open tenders in bouw en vastgoed</span></div>
       <div class="stat reveal d1"><strong data-count="0" data-prefix="€">€0</strong><span>vooraf, ook als je niet wint</span></div>
       <div class="stat reveal d2"><strong data-count="20" data-suffix=" min">20 min</strong><span>van jouw tijd om te starten</span></div>
     </div>
@@ -395,9 +414,9 @@ footer a{color:var(--ink-2)}
 
 <section class="build center" id="van-tender-tot-gegund">
   <div class="wrap">
-    <p class="mono reveal">Van tender tot gegund</p>
-    <h2 class="reveal d1">Wij tillen je inschrijving<br>naar de top.</h2>
-    <p class="sub reveal d2" style="margin-top:20px">Jij levert de bouwstenen. Wij zetten ze op hun plek, precies zoals de beoordelaar het wil zien.</p>
+    <p class="eyebrow reveal">Van tender tot gegund</p>
+    <h2 class="reveal d1">Van leidraad<br>tot gunning.</h2>
+    <p class="sub reveal d2" style="margin-top:20px">Jij levert je referenties, cv's en certificaten. Wij maken er een inschrijving van die scoort op de gunningscriteria.</p>
   </div>
   <div class="scene-wrap reveal d2">
     <svg class="cr" id="crane" viewBox="0 0 1000 400" role="img" aria-label="Een bouwkraan tilt een inschrijving op een gebouw, waarna er een groen vinkje en de vlag Gegund verschijnen">
@@ -445,7 +464,6 @@ footer a{color:var(--ink-2)}
       <!-- ground -->
       <path d="M0 360h1000" stroke="#1d1d1f" stroke-width="3"/>
     </svg>
-    <div class="captions"><span>Jouw inschrijving</span><span>Gegund</span><span>Elke tender, opnieuw</span></div>
   </div>
   <div class="groundline"></div>
 </section>
@@ -453,7 +471,7 @@ footer a{color:var(--ink-2)}
 <section class="night" id="werkwijze">
   <div class="wrap">
     <div class="center">
-      <p class="mono reveal">Werkwijze</p>
+      <p class="eyebrow reveal">Werkwijze</p>
       <h2 class="reveal d1">Vier stappen.<br>Twee daarvan zijn voor jou.</h2>
       <p class="sub reveal d2" style="margin-top:20px">Je hoeft geen aanbestedingsleidraad van 70 pagina's door te lezen. Dat doen wij.</p>
     </div>
@@ -465,15 +483,12 @@ footer a{color:var(--ink-2)}
         <li><button type="button" aria-controls="s3"><span>04</span>Jij keurt goed <em class="you">Jouw rol</em></button><p>Je leest mee, tekent wat getekend moet worden en de inschrijving gaat de deur uit. Gegund? Pas dan komt er een factuur.</p></li>
       </ol>
       <div class="panel" aria-live="polite">
-        <div class="head"><i></i><i></i><i></i><span style="margin-left:8px" id="panelTitle">scout</span></div>
+        <div class="head"><i></i><i></i><i></i><span style="margin-left:8px" id="panelTitle">Gevonden tenders</span></div>
         <div class="scene on" id="s0">
-          <div class="ln" style="--i:0"><span class="c">$</span> tenderwerk zoek <span class="b">--sector</span> taxatie</div>
-          <div class="ln" style="--i:1"><span class="c">→ 3.121 publicaties gelezen</span></div>
-          <div class="ln" style="--i:2"><span class="g">✓</span> Taxatiediensten Rotterdam <span class="y">topkans</span></div>
-          <div class="ln" style="--i:3"><span class="g">✓</span> WOZ Walcheren en Schouwen <span class="y">topkans</span></div>
-          <div class="ln" style="--i:4"><span class="c">✕ ICT-beheer gemeente</span> <span class="c">overslaan</span></div>
-          <div class="ln" style="--i:5"><span class="c">✕ Taxatie, sluit over 6 dagen</span> <span class="c">te krap</span></div>
-          <div class="ln" style="--i:6"><span class="c">→</span> <span class="g">2 kansen voor jou</span></div>
+          <div class="hit ln" style="--i:0"><div><strong>Taxatiediensten gemeente Rotterdam</strong><small>Sluit 1 februari 2027</small></div><em class="ok">Past bij je</em></div>
+          <div class="hit ln" style="--i:1"><div><strong>WOZ Walcheren en Schouwen</strong><small>Sluit 1 december 2026</small></div><em class="ok">Past bij je</em></div>
+          <div class="hit ln" style="--i:2"><div><strong>Onderhoud schoolgebouwen</strong><small>Referentie te klein</small></div><em>Niet doen</em></div>
+          <div class="hit ln" style="--i:3"><div><strong>Taxatie agrarische grond</strong><small>Sluit over 6 dagen</small></div><em>Te krap</em></div>
         </div>
         <div class="scene" id="s1">
           <div class="check" style="--i:0"><i></i>Referentieproject passend bij de opdracht</div>
@@ -513,14 +528,14 @@ footer a{color:var(--ink-2)}
 <section id="voor-wie">
   <div class="wrap">
     <div class="center">
-      <p class="mono reveal">Voor wie</p>
-      <h2 class="reveal d1">Alleen de bouw.<br>Daarin zijn we goed.</h2>
+      <p class="eyebrow reveal">Voor wie</p>
+      <h2 class="reveal d1">Bouw en vastgoed.<br>Daar zijn we goed in.</h2>
       <p class="sub reveal d2" style="margin-top:20px">We spreken de taal van de beoordelaar: bouwteam, EMVI, MKI, BPKV en NEN 2767.</p>
     </div>
     <div class="sectors">
       <div class="sector focus reveal">
         <svg viewBox="0 0 40 40"><path d="M6 34V16l14-10 14 10v18"/><path d="M14 34V22h12v12"/><path d="M17 27h6"/></svg>
-        <h3>Taxateurs en vastgoedadvies</h3><p>Taxaties, WOZ, MJOP en NEN 2767-conditiemetingen.</p><span class="tag">Nu onze focus</span>
+        <h3>Taxateurs en WOZ</h3><p>Taxatiediensten, WOZ-waardering en vastgoedadvies voor gemeenten en corporaties.</p><span class="tag">Hier beginnen we mee</span>
       </div>
       <div class="sector reveal d1">
         <svg viewBox="0 0 40 40"><path d="M6 34h28"/><path d="M10 34V14h12v20"/><path d="M22 20h8v14"/><path d="M14 19h4M14 24h4M14 29h4"/></svg>
@@ -540,16 +555,15 @@ footer a{color:var(--ink-2)}
       </div>
       <div class="sector reveal d2">
         <svg viewBox="0 0 40 40"><rect x="8" y="6" width="24" height="28" rx="3"/><path d="M14 14h12M14 20h12M14 26h7"/></svg>
-        <h3>Bouwadvies en engineering</h3><p>Bouwkundig advies, constructie, directievoering en toezicht.</p>
+        <h3>Vastgoedbeheer en MJOP</h3><p>Meerjarenonderhoudsplannen, NEN 2767-conditiemetingen, beheer en bouwkundig advies.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="zero center" id="no-cure-no-pay">
-  <canvas data-grid="dark" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="mono reveal">No cure, no pay</p>
+    <p class="eyebrow reveal">No cure, no pay</p>
     <p class="huge reveal d1">€0 vooraf.</p>
     <p class="sub reveal d2">Win je de opdracht, dan betaal je een vooraf afgesproken percentage. Win je niet, dan betaal je niets. Wij lopen het risico.</p>
     <div class="three">
@@ -560,21 +574,25 @@ footer a{color:var(--ink-2)}
   </div>
 </section>
 
-<section class="center">
-  <div class="wrap">
-    <p class="quote" id="quote">“Goede bouwbedrijven verliezen tenders niet op vakmanschap. Ze verliezen ze op papier.”</p>
-    <div class="byline reveal">
-      <span class="avatar">YD</span>
-      <div><strong>Yasmine Dahhane</strong><br><small>Oprichter Tenderwerk</small></div>
+<section id="over-mij">
+  <div class="wrap me">
+    <figure class="photo reveal">
+      <img src="img/yasmine.jpg" width="600" height="600" alt="Yasmine Dahhane, oprichter van Tenderwerk" loading="lazy">
+      <figcaption><strong>Yasmine Dahhane</strong><span>Oprichter Tenderwerk · Vastgoedconsultant</span></figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow reveal">Over mij</p>
+      <p class="quote" id="quote">“Goede bedrijven verliezen tenders zelden op vakmanschap. Ze verliezen ze op papier.”</p>
+      <p class="aboutcopy reveal d1">Ik ben Yasmine, vastgoedconsultant. Met een achtergrond in vastgoed zag ik hoe vaak goede bedrijven niet eens meedoen aan aanbestedingen. Daarom ben ik Tenderwerk begonnen. Software helpt me om tenders te vinden en de stukken door te nemen. Elke tekst lees en controleer ik zelf, en jij keurt alles goed voordat er iets wordt ingediend.</p>
+      <p class="reveal d2" style="margin-top:28px"><a class="btn" href="#contact">Bel even met me</a></p>
     </div>
-    <p class="aboutcopy reveal d1">Met een achtergrond in vastgoed zag ik hoe vaak goede bedrijven niet eens meedoen aan aanbestedingen. Daarom combineer ik kennis van bouw en aanbesteden met slimme tools. Zo werk ik snel, zonder in te leveren op kwaliteit. Elke inschrijving wordt door een mens gecontroleerd en door jou goedgekeurd.</p>
   </div>
 </section>
 
 <section class="gray" id="vragen">
   <div class="wrap">
     <div class="center">
-      <p class="mono reveal">Vragen</p>
+      <p class="eyebrow reveal">Vragen</p>
       <h2 class="reveal d1">Goed om te weten.</h2>
     </div>
     <div class="faq reveal d2">
@@ -582,7 +600,7 @@ footer a{color:var(--ink-2)}
       <details><summary>Hoeveel tijd kost het mij?</summary><div class="a"><p>Een belgesprek van ongeveer 20 minuten, het aanleveren van referentieprojecten, cv's en certificaten (zoals VCA, ISO of BRL), en het doorlezen en ondertekenen van de definitieve versie. De rest doen wij.</p></div></details>
       <details><summary>Wie dient de inschrijving in?</summary><div class="a"><p>Jouw bedrijf is en blijft de inschrijver. Met jouw volmacht kunnen wij het uploaden regelen, of jij doet dat zelf. De prijs of begroting maak jij, en documenten zoals het UEA en het inschrijvingsbiljet onderteken je zelf.</p></div></details>
       <details><summary>Wat als ik niet aan de eisen voldoe?</summary><div class="a"><p>Dan zeggen we dat direct na het eerste gesprek. Soms is een combinatie met een ander bedrijf of een onderaannemer een oplossing; dan denken we mee.</p></div></details>
-      <details><summary>Gebruiken jullie AI?</summary><div class="a"><p>Ja, voor het zoeken van tenders en het analyseren van stukken. Dat maakt ons snel. Elke tekst wordt gecontroleerd en jij keurt alles goed voordat er iets wordt ingediend. Feiten over jouw bedrijf komen altijd van jou.</p></div></details>
+      <details><summary>Gebruiken jullie AI?</summary><div class="a"><p>Ja, als hulpmiddel bij het zoeken van tenders en het doornemen van stukken. Het schrijfwerk controleer ik zelf, regel voor regel, en jij keurt alles goed. Feiten over jouw bedrijf komen altijd van jou.</p></div></details>
     </div>
   </div>
 </section>
@@ -590,9 +608,10 @@ footer a{color:var(--ink-2)}
 <section class="gray" id="contact" style="padding-top:0">
   <div class="wrap contact">
     <div class="reveal">
-      <p class="mono">Contact</p>
+      <p class="eyebrow">Contact</p>
       <h2>Ligt er een tender voor je klaar?</h2>
       <p class="sub" style="margin-top:20px"><span class="ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>Laat je gegevens achter. Ik bel je binnen één werkdag terug.</p>
+      <div class="direct"><img src="img/yasmine.jpg" alt="" width="56" height="56" loading="lazy"><div><strong>Je spreekt mij direct</strong><span>Geen callcenter, geen doorverbinden.</span></div></div>
       <ul class="checks">
         <li>Met de tenders die nu openstaan voor jouw vakgebied</li>
         <li>Eerlijk advies: meedoen of niet</li>
@@ -616,7 +635,7 @@ footer a{color:var(--ink-2)}
         <div class="field">
           <select id="spec" name="specialisme">
             <option>Taxaties / WOZ / MJOP</option><option>Aannemer B&amp;U</option><option>Installaties</option><option>Infra / GWW</option>
-            <option>Onderhoud / verduurzaming</option><option>Bouwadvies / engineering</option><option>Anders</option>
+            <option>Onderhoud / verduurzaming</option><option>Vastgoedbeheer / MJOP</option><option>Bouwadvies / engineering</option><option>Anders</option>
           </select><label for="spec">Vakgebied</label>
         </div>
         <div class="field"><textarea id="bericht" name="bericht" placeholder=" "></textarea><label for="bericht">Bericht (optioneel)</label></div>
@@ -631,7 +650,7 @@ footer a{color:var(--ink-2)}
 
 <footer>
   <div class="wrap">
-    <span>Copyright © 2026 Tenderwerk. Tenders schrijven voor bedrijven in de bouw.</span>
+    <span>Copyright © 2026 Tenderwerk. Tenders schrijven voor bouw- en vastgoedbedrijven.</span>
     <span><a href="#no-cure-no-pay">No cure, no pay</a> · <a href="#contact">Contact</a></span>
   </div>
 </footer>
@@ -672,11 +691,11 @@ footer a{color:var(--ink-2)}
   /* hero window: scan, then results */
   var win = $('#win'), meter = $('#meter'), n = $('#scanN'), scan = $('#scan'), st = $('#scanText');
   function play(){
-    if(still){ n.textContent='432'; meter.style.transform='scaleX(1)'; st.textContent='Klaar: 4 tenders passen bij jou'; scan.classList.add('done'); win.classList.add('play'); return }
+    if(still){ n.textContent='432'; meter.style.transform='scaleX(1)'; st.textContent='4 tenders passen bij jou'; scan.classList.add('done'); win.classList.add('play'); return }
     var t0=null, dur=1800, to=432;
     function f(t){ t0=t0||t; var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
       n.textContent=Math.round(to*e); meter.style.transform='scaleX('+e+')';
-      if(p<1) requestAnimationFrame(f); else { st.textContent='Klaar: 4 tenders passen bij jou'; scan.classList.add('done'); win.classList.add('play') } }
+      if(p<1) requestAnimationFrame(f); else { st.textContent='4 tenders passen bij jou'; scan.classList.add('done'); win.classList.add('play') } }
     requestAnimationFrame(f);
   }
   if(win) setTimeout(function(){onView(win,play,{threshold:.25})}, 500);
@@ -696,7 +715,7 @@ footer a{color:var(--ink-2)}
   onScroll();
 
   /* werkwijze: GitHub-style auto-advancing steps */
-  var steps = $$('#steps li'), scenes = $$('.scene'), title = $('#panelTitle'), names = ['scout','belgesprek','writer','gegund'];
+  var steps = $$('#steps li'), scenes = $$('.scene'), title = $('#panelTitle'), names = ['Gevonden tenders','Belgesprek','Inschrijving','Uitslag'];
   var cur = 0, timer = null, DUR = 7000, list = $('#steps');
   function show(k, user){
     cur = k;
