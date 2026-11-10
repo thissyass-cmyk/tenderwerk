@@ -4,31 +4,45 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bedankt · Tenderbouw</title>
+<meta name="robots" content="noindex">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="logo/mark.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#0a7c5a">
-<meta name="robots" content="noindex">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#ffffff">
+<link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f5f5f7;color:#1d1d1f;font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter",Arial,sans-serif;letter-spacing:-.022em;-webkit-font-smoothing:antialiased;padding:24px;text-align:center}
-.ok{width:64px;height:64px;border-radius:50%;background:#e3f4ec;display:grid;place-items:center;margin:0 auto 28px}
-h1{font-size:clamp(34px,6vw,48px);font-weight:600;letter-spacing:-.04em;line-height:1.08;margin:0 0 14px}
-p{color:#6e6e73;max-width:460px;margin:0 auto;font-size:19px}
-a{display:inline-block;margin-top:32px;background:#0a7c5a;color:#fff;text-decoration:none;padding:13px 22px;border-radius:980px;font-weight:500}
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/inter-tight-latin.woff2) format("woff2")}
+:root{--ink:#1a1a18;--ink-2:#5c5c57;--ink-3:#8a8983;--line:rgba(26,26,24,.12);--bg-2:#f6f5f2;--accent:#0a7c5a;--accent-2:#086a4c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:grid;place-items:center;background:var(--bg-2);color:var(--ink);font:400 17px/1.6 "Inter Tight",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;padding:24px}
+.box{width:min(560px,100%);background:#fff;border-radius:14px;padding:clamp(28px,6vw,48px);box-shadow:0 30px 60px -40px rgba(26,26,24,.35);animation:in .8s cubic-bezier(.22,1,.36,1) both}
+.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:14px;margin-bottom:40px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.top b{color:var(--accent);font-weight:600;margin-right:8px}
+.mark{width:52px;height:52px;display:block;margin-bottom:28px}
+.mark path{stroke-dasharray:50;animation:draw .9s cubic-bezier(.22,1,.36,1) .3s both}
+.mark path+path{stroke-dasharray:32;animation-delay:.8s}
+h1{font-size:clamp(34px,6vw,48px);font-weight:500;letter-spacing:-.045em;line-height:1.02;margin-bottom:16px}
+h1 span{color:var(--accent)}
+p{color:var(--ink-2);font-size:18px}
+p a{color:var(--ink);border-bottom:1px solid var(--accent);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:34px;background:var(--accent);color:#fff;text-decoration:none;padding:15px 22px;border-radius:8px;font-weight:500;transition:background .25s}
+.btn:hover{background:var(--accent-2)}
+.btn i{transition:transform .3s cubic-bezier(.22,1,.36,1);font-style:normal}
+.btn:hover i{transform:translateX(4px)}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes draw{from{stroke-dashoffset:50}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 </head>
 <body>
-<div>
-  <div class="ok"><svg width="26" height="20" viewBox="0 0 26 20"><path d="M2 10l7 7L24 2" stroke="#0a7c5a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-  <h1>Dank je. Ik heb je bericht.</h1>
-  <p>Ik bel je binnen één werkdag terug, met de tenders die nu openstaan voor jouw vakgebied.</p>
-  <p style="margin-top:14px;font-size:16px">Haast? <a href="#contact" data-wa target="_blank" rel="noopener" style="display:inline;margin:0;padding:0;background:none;color:#0a7c5a">Stuur me een WhatsApp</a>.</p>
-  <a href="./">Terug naar de website</a>
+<div class="box">
+  <div class="top"><span><b>01</b>Aanvraag ontvangen</span><span>Tenderbouw</span></div>
+  <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#0a7c5a"/><path d="M13 31L32 16l19 15" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="square"/><path d="M22 40l7.5 7.5L44 33" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="square"/></svg>
+  <h1>Dank je.<br><span>Ik ga ermee aan de slag.</span></h1>
+  <p>Binnen één werkdag hoor je welke tenders er nu voor jou openstaan, en of meedoen zinvol is.</p>
+  <p style="margin-top:12px;font-size:16px">Haast? <a href="#" data-wa target="_blank" rel="noopener">Stuur me een WhatsApp</a>.</p>
+  <a class="btn" href="./">Terug naar de website <i>→</i></a>
 </div>
-<script>(function(){var n=['31','6','40','33','24','88'].join(''),t=encodeURIComponent('Hoi Yasmine, ik heb een vraag over Tenderbouw.');document.querySelectorAll('a[data-wa]').forEach(function(a){a.href='https://wa.me/'+n+'?text='+t})})();</script>
+<script>(function(){var n=['31','6','40','33','24','88'].join(''),t=encodeURIComponent('Hoi, ik heb een vraag over Tenderbouw.');document.querySelectorAll('a[data-wa]').forEach(function(a){a.href='https://wa.me/'+n+'?text='+t})})();</script>
 </body>
 </html>

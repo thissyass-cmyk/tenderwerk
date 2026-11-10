@@ -22,17 +22,18 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://thissyass-cmyk.github.io/tenderwerk/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tenderbouw","url":"https://thissyass-cmyk.github.io/tenderwerk/","description":"Tenders schrijven voor bouw- en vastgoedbedrijven, op basis van no cure, no pay.","areaServed":"NL","identifier":{"@type":"PropertyValue","propertyID":"KvK","value":"88715450"},"email":"thissyass@gmail.com","logo":"https://thissyass-cmyk.github.io/tenderwerk/apple-touch-icon.png","founder":{"@type":"Person","name":"Yasmine Dahhane"}}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tenderbouw","url":"https://thissyass-cmyk.github.io/tenderwerk/","description":"Tenders schrijven voor bouw- en vastgoedbedrijven, op basis van no cure, no pay.","areaServed":"NL","identifier":{"@type":"PropertyValue","propertyID":"KvK","value":"88715450"},"vatID":"NL004634710B11","logo":"https://thissyass-cmyk.github.io/tenderwerk/apple-touch-icon.png","founder":{"@type":"Person","name":"Yasmine Dahhane"}}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat kost het?", "acceptedAnswer": {"@type": "Answer", "text": "Niets vooraf. Alleen bij gunning betaal je een vast percentage van de opdrachtwaarde, dat we vooraf schriftelijk afspreken. Eén factuur, na ondertekening van het contract."}}, {"@type": "Question", "name": "Hoe groot is mijn kans?", "acceptedAnswer": {"@type": "Answer", "text": "Gemiddeld doen zo'n vier partijen mee, dus je basiskans is ongeveer 25%. Met strenge selectie en een inschrijving die precies op de criteria scoort, is 30 tot 40% realistisch."}}, {"@type": "Question", "name": "Wat als je niet wint?", "acceptedAnswer": {"@type": "Answer", "text": "Dan betaal je niets. Ook niet als de aanbesteding wordt ingetrokken of de gunning niet doorgaat."}}, {"@type": "Question", "name": "Hoeveel tijd kost het mij?", "acceptedAnswer": {"@type": "Answer", "text": "Een gesprek van 20 minuten, je stukken aanleveren (referenties, cv's, certificaten, KvK-uittreksel) en de eindversie tekenen."}}, {"@type": "Question", "name": "Wie maakt de prijs en wie dient in?", "acceptedAnswer": {"@type": "Answer", "text": "Jij maakt de prijs en tekent het UEA en het inschrijvingsbiljet. Het uploaden regel ik met jouw volmacht, of je doet het zelf."}}, {"@type": "Question", "name": "Welke tenders doe je?", "acceptedAnswer": {"@type": "Answer", "text": "Bouw- en vastgoedopdrachten van gemeenten, provincies, waterschappen, scholen en corporaties, vooral via TenderNed. Ik start bij minimaal tien dagen voor de deadline."}}, {"@type": "Question", "name": "Werk je ook voor mijn concurrent?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Per tender schrijf ik voor één inschrijver, en je gegevens blijven vertrouwelijk."}}]}
 </script>
 <script>document.documentElement.className+=' js';if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className+=' still'</script>
+<script>if('scrollRestoration' in history)history.scrollRestoration='manual';if(location.hash){history.replaceState(null,'',location.pathname+location.search)}window.scrollTo(0,0);addEventListener('load',function(){window.scrollTo(0,0)});addEventListener('pageshow',function(e){if(e.persisted)window.scrollTo(0,0)});</script>
 <style>
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/inter-tight-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
 :root{
   --bg:#fff; --bg-2:#f6f5f2; --bg-3:#efeee9;
   --ink:#1a1a18; --ink-2:#5e5d59; --ink-3:#8e8c86;
@@ -613,13 +614,13 @@ form .btn:disabled{opacity:.6;cursor:default}
     <div class="stage reveal d2" aria-hidden="true">
       <span class="cross" style="left:calc(var(--gut) - 22px);top:-22px"></span><span class="cross" style="right:calc(var(--gut) - 22px);top:-22px"></span>
       <div class="reg" id="win">
-        <div class="reg-head"><strong>Open tenders voor jouw vakgebied</strong><span class="reg-scan" id="scan"><span class="sq"></span><span id="scanText">TenderNed bekijken</span><b id="scanN">0</b><span class="hide-s">tenders</span></span></div>
+        <div class="reg-head"><strong>Voorbeeld: zo beoordelen we tenders</strong><span class="reg-scan" id="scan"><span class="sq"></span><span id="scanText">TenderNed bekijken</span><b id="scanN">0</b><span class="hide-s">tenders</span></span></div>
         <div class="meter"><i id="meter"></i></div>
         <div class="reg-cols lbl"><span>Nr</span><span>Opdracht</span><span>Opdrachtgever en waarde</span><span>Oordeel</span></div>
-        <div class="item" style="--d:0s"><span class="no">01</span><strong>Taxatiediensten gemeente Rotterdam</strong><small>Raamovereenkomst tot 2031 · sluit 1 februari 2027</small><span class="v go">Topkans</span></div>
-        <div class="item" style="--d:.12s"><span class="no">02</span><strong>Bouwkundig aannemer, vastgoed Nuis</strong><small>Provincie Groningen · ca. €3,5 miljoen</small><span class="v go">Topkans</span></div>
-        <div class="item" style="--d:.24s"><span class="no">03</span><strong>Aanpak dorpenlint</strong><small>Gemeente Oldambt · ca. €5,5 miljoen</small><span class="v wait">Referentie checken</span></div>
-        <div class="item" style="--d:.36s"><span class="no">04</span><strong>Meerjarig onderhoud civiele werken</strong><small>Waternet · ca. €1,1 miljoen</small><span class="v no">Te krap</span></div>
+        <div class="item" style="--d:0s"><span class="no">01</span><strong>Taxatiediensten gemeente</strong><small>Raamovereenkomst 4 jaar · WOZ en vastgoed</small><span class="v go">Topkans</span></div>
+        <div class="item" style="--d:.12s"><span class="no">02</span><strong>Renovatie schoolgebouw</strong><small>Provincie · ca. €3,5 miljoen</small><span class="v go">Topkans</span></div>
+        <div class="item" style="--d:.24s"><span class="no">03</span><strong>Herinrichting openbare ruimte</strong><small>Gemeente · ca. €5 miljoen</small><span class="v wait">Referentie checken</span></div>
+        <div class="item" style="--d:.36s"><span class="no">04</span><strong>Meerjarig onderhoud civiele werken</strong><small>Waterschap · sluit over 6 dagen</small><span class="v no">Te krap</span></div>
       </div>
     </div>
   </div>
@@ -828,8 +829,8 @@ form .btn:disabled{opacity:.6;cursor:default}
       <div class="panel" aria-live="polite">
         <div class="head"><b id="panelTitle">Gevonden tenders</b><span class="lbl">Blad <span id="sheet">1</span> / 4</span></div>
         <div class="scene on" id="s0">
-          <div class="hit ln" style="--i:0"><div><strong>Taxatiediensten gemeente Rotterdam</strong><small>Sluit 1 februari 2027</small></div><em class="ok">Past bij je</em></div>
-          <div class="hit ln" style="--i:1"><div><strong>WOZ Walcheren en Schouwen</strong><small>Sluit 1 december 2026</small></div><em class="ok">Past bij je</em></div>
+          <div class="hit ln" style="--i:0"><div><strong>Taxatiediensten gemeente</strong><small>Raamovereenkomst 4 jaar</small></div><em class="ok">Past bij je</em></div>
+          <div class="hit ln" style="--i:1"><div><strong>WOZ-waardering waterschap</strong><small>Past bij je referenties</small></div><em class="ok">Past bij je</em></div>
           <div class="hit ln" style="--i:2"><div><strong>Onderhoud schoolgebouwen</strong><small>Referentie te klein</small></div><em>Niet doen</em></div>
           <div class="hit ln" style="--i:3"><div><strong>Taxatie agrarische grond</strong><small>Sluit over 6 dagen</small></div><em>Te krap</em></div>
         </div>
@@ -984,7 +985,7 @@ form .btn:disabled{opacity:.6;cursor:default}
         </div>
         <div class="field"><textarea id="bericht" name="bericht" placeholder=" "></textarea><label for="bericht">Bericht (optioneel)</label></div>
         <button class="btn" type="submit">Verstuur</button>
-        <p class="small">Ik gebruik je gegevens alleen om contact met je op te nemen.</p>
+        <p class="small">Ik gebruik je gegevens alleen om contact met je op te nemen. Lees de <a href="privacy.html">privacyverklaring</a>.</p>
       </form>
     </div>
   </div>
@@ -1000,11 +1001,11 @@ form .btn:disabled{opacity:.6;cursor:default}
         <p>Tenders schrijven voor bouw- en vastgoedbedrijven. No cure, no pay.</p>
       </div>
       <div class="fcol"><h4 class="lbl">Contact</h4><p><a href="#contact" data-wa target="_blank" rel="noopener">WhatsApp</a><br><a href="https://www.linkedin.com/in/yasmine-dahhane-8b6049316/" target="_blank" rel="noopener">LinkedIn</a></p></div>
-      <div class="fcol"><h4 class="lbl">Bedrijfsgegevens</h4><p>Tenderbouw<br>KvK 88715450</p></div>
+      <div class="fcol"><h4 class="lbl">Bedrijfsgegevens</h4><p>Tenderbouw<br>KvK 88715450<br>Btw NL004634710B11<br><a href="privacy.html">Privacyverklaring</a></p></div>
       <div class="fcol"><h4 class="lbl">Pagina</h4><p><a href="#werkwijze">Werkwijze</a><br><a href="#voor-wie">Voor wie</a><br><a href="#no-cure-no-pay">No cure, no pay</a><br><a href="#vragen">Veelgestelde vragen</a><br><a href="#contact">Contact</a></p></div>
     </div>
     <p class="wordmark" aria-hidden="true">Tender<b>bouw</b></p>
-    <div class="fbottom lbl"><span>Copyright © 2026 Tenderbouw. Alle rechten voorbehouden.</span><a href="#top">Naar boven</a></div>
+    <div class="fbottom lbl"><span>Copyright © 2026 Tenderbouw. Alle rechten voorbehouden. · <a href="privacy.html">Privacy</a></span><a href="#top">Naar boven</a></div>
   </div>
 </footer>
 
@@ -1038,11 +1039,11 @@ form .btn:disabled{opacity:.6;cursor:default}
   /* hero register: scan, then results */
   var win = $('#win'), meter = $('#meter'), n = $('#scanN'), scan = $('#scan'), st = $('#scanText');
   function play(){
-    if(still){ n.textContent='432'; meter.style.transform='scaleX(1)'; st.textContent='4 tenders passen bij jou'; scan.classList.add('done'); win.classList.add('play'); return }
-    var t0=null, dur=1800, to=432;
+    if(still){ n.textContent='432'; meter.style.transform='scaleX(1)'; st.textContent='2 van 4 passen bij jou'; scan.classList.add('done'); win.classList.add('play'); return }
+    var t0=null, dur=1800, to=430;
     function f(t){ t0=t0||t; var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
       n.textContent=Math.round(to*e); meter.style.transform='scaleX('+e+')';
-      if(p<1) requestAnimationFrame(f); else { st.textContent='4 tenders passen bij jou'; scan.classList.add('done'); win.classList.add('play') } }
+      if(p<1) requestAnimationFrame(f); else { st.textContent='2 van 4 passen bij jou'; scan.classList.add('done'); win.classList.add('play') } }
     requestAnimationFrame(f);
   }
   if(win) setTimeout(function(){onView(win,play,{threshold:.25})}, 600);
