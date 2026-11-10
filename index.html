@@ -175,10 +175,10 @@ h3{font-size:21px;line-height:1.2;letter-spacing:-.02em;font-weight:500}
 
 /* winkans */
 .odds{row-gap:var(--gap)}
-.odd{grid-column:span 4;background:var(--bg-2);border-radius:var(--r);padding:22px clamp(20px,2.4vw,30px) 30px;transition:transform .5s var(--ease),box-shadow .5s ease}
+.odd{container-type:inline-size;grid-column:span 4;background:var(--bg-2);border-radius:var(--r);padding:22px clamp(20px,2.4vw,30px) 30px;transition:transform .5s var(--ease),box-shadow .5s ease}
 @media (hover:hover){.odd:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(26,26,24,.3)}}
 .odd .lbl{display:flex;justify-content:space-between}
-.odd strong{display:block;margin-top:44px;font-size:clamp(60px,7vw,108px);font-weight:500;letter-spacing:-.055em;line-height:.9;font-variant-numeric:tabular-nums;white-space:nowrap}
+.odd strong{display:block;margin-top:44px;font-size:min(clamp(60px,7vw,108px),calc(100cqi / 3.7));font-weight:500;letter-spacing:-.055em;line-height:.9;font-variant-numeric:tabular-nums;white-space:nowrap}
 .odd p{margin-top:22px;color:var(--ink-2);max-width:20em;font-size:16px}
 .odd.hl{background:var(--ink);color:#fff}
 .odd.hl strong{color:var(--accent)}
