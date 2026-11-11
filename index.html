@@ -168,9 +168,9 @@ h3{font-size:21px;line-height:1.2;letter-spacing:-.02em;font-weight:500}
 
 /* stats */
 .stats{row-gap:56px}
-.stat{grid-column:span 4}
+.stat{grid-column:span 4;container-type:inline-size}
 .stat .dim{margin:32px 0 26px}
-.stat strong{display:block;font-size:clamp(72px,9.6vw,148px);font-weight:500;letter-spacing:-.06em;line-height:.86;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat strong{display:block;font-size:min(clamp(72px,9.6vw,148px),calc(100cqi / 3.15));font-weight:500;letter-spacing:-.06em;line-height:.86;font-variant-numeric:tabular-nums;white-space:nowrap}
 .stat:nth-child(2) strong{color:var(--accent)}
 .stat p{margin-top:20px;color:var(--ink-2);max-width:18em}
 
@@ -603,6 +603,10 @@ details[open] .tiers li:nth-child(2) i{animation-delay:.1s}
 details[open] .tiers li:nth-child(3) i{animation-delay:.2s}
 @keyframes tierGrow{from{transform:scaleX(0)}to{transform:scaleX(var(--w))}}
 @media (max-width:760px){.price{grid-template-columns:1fr;margin-left:0}.pchips{margin-left:0}}
+.pc-ex{margin-top:12px;padding:12px;border-radius:8px;border:1px dashed rgba(26,26,24,.22)}
+.pc-ex span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3,#8a8983)}
+.pc-ex p{padding:0!important;margin:2px 0 0;font-size:14px;color:var(--ink-2)!important;max-width:none}
+.pc-ex .calc b{color:var(--accent);font-weight:600;font-size:17px}
 </style>
 </head>
 <body>
@@ -844,16 +848,17 @@ details[open] .tiers li:nth-child(3) i{animation-delay:.2s}
 
 <section class="sec warm" id="werkwijze">
   <div class="wrap">
-    <header class="sh g reveal"><p class="sh-n lbl"><span>05</span>Werkwijze</p><div class="sh-b"><h2>Vier stappen.<br>Twee daarvan zijn voor jou.</h2><p class="sub">Je hoeft geen aanbestedingsleidraad van 70 pagina's door te lezen. Dat doen wij.</p></div></header>
+    <header class="sh g reveal"><p class="sh-n lbl"><span>05</span>Werkwijze</p><div class="sh-b"><h2>Vijf stappen.<br>Twee daarvan zijn voor jou.</h2><p class="sub">Je hoeft geen aanbestedingsleidraad van 70 pagina's door te lezen. Dat doen wij.</p></div></header>
     <div class="flow g reveal">
       <ol class="steps" id="steps">
         <li class="on"><button type="button" aria-controls="s0"><span>01</span>We vinden de tender</button><p>We volgen TenderNed en andere platforms en selecteren alleen opdrachten waar jouw bedrijf echt kans maakt.</p></li>
         <li><button type="button" aria-controls="s1"><span>02</span>We bellen <em class="you">Jouw rol</em></button><p>Twintig minuten. We checken referenties en certificaten en halen op wat we nodig hebben.</p></li>
         <li><button type="button" aria-controls="s2"><span>03</span>We schrijven</button><p>Plan van aanpak, planning, kwaliteit, duurzaamheid en risico's. Precies op de gunningscriteria en binnen de paginalimiet.</p></li>
-        <li><button type="button" aria-controls="s3"><span>04</span>Jij keurt goed <em class="you">Jouw rol</em></button><p>Je leest mee, tekent wat getekend moet worden en de inschrijving gaat de deur uit. Gegund? Pas dan komt er een factuur.</p></li>
+        <li><button type="button" aria-controls="s3"><span>04</span>Jij keurt goed <em class="you">Jouw rol</em></button><p>Je leest mee, vult je prijs in en tekent wat getekend moet worden. Daarna gaat de inschrijving op tijd de deur uit.</p></li>
+        <li><button type="button" aria-controls="s4"><span>05</span>Gegund? Pas dan betaal je</button><p>Win je de opdracht, dan volgt één factuur na ondertekening van het contract. Win je niet, dan betaal je niets.</p></li>
       </ol>
       <div class="panel" aria-live="polite">
-        <div class="head"><b id="panelTitle">Gevonden tenders</b><span class="lbl">Blad <span id="sheet">1</span> / 4</span></div>
+        <div class="head"><b id="panelTitle">Gevonden tenders</b><span class="lbl">Blad <span id="sheet">1</span> / 5</span></div>
         <div class="scene on" id="s0">
           <div class="hit ln" style="--i:0"><div><strong>Taxatiediensten gemeente</strong><small>Raamovereenkomst 4 jaar</small></div><em class="ok">Past bij je</em></div>
           <div class="hit ln" style="--i:1"><div><strong>WOZ-waardering waterschap</strong><small>Past bij je referenties</small></div><em class="ok">Past bij je</em></div>
@@ -882,10 +887,17 @@ details[open] .tiers li:nth-child(3) i{animation-delay:.2s}
           </div>
         </div>
         <div class="scene" id="s3">
+          <div class="check" style="--i:0"><i></i>Inschrijving gelezen en akkoord</div>
+          <div class="check" style="--i:1"><i></i>Prijs ingevuld op het prijzenblad</div>
+          <div class="check" style="--i:2"><i></i>UEA en inschrijvingsbiljet getekend</div>
+          <div class="check" style="--i:3"><i></i>Ingediend, ruim voor de deadline</div>
+          <p class="ln" style="--i:4;margin-top:18px;color:var(--ink-2)">Jouw bedrijf blijft de inschrijver.</p>
+        </div>
+        <div class="scene" id="s4">
           <div class="win">
             <div class="badge"><svg width="28" height="22" viewBox="0 0 26 20" aria-hidden="true"><path d="M2 10l7 7L24 2" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <h4>Gegund.</h4>
-            <p>Pas nu komt er een factuur.</p>
+            <p>Pas nu komt er een factuur. Niet gewonnen? Dan betaal je niets.</p>
           </div>
         </div>
       </div>
@@ -931,11 +943,11 @@ details[open] .tiers li:nth-child(3) i{animation-delay:.2s}
     <div class="g">
       <h2 class="huge reveal">€0<span>vooraf.</span></h2>
       <div class="dim lbl zdim reveal d1"><i></i><span>Ook als je niet wint</span><i></i></div>
-      <p class="zero-sub reveal d2">Win je de opdracht, dan betaal je een vooraf afgesproken percentage van de opdrachtwaarde. Win je niet, dan betaal je niets. Het risico ligt bij ons.</p>
+      <p class="zero-sub reveal d2">Win je de opdracht, dan betaal je een vast tarief: een percentage van de opdrachtwaarde, of een vast bedrag bij een raamovereenkomst. Win je niet, dan betaal je niets. Het risico ligt bij ons. <a class="lnk" href="#vragen">Bekijk de tarieven</a></p>
     </div>
     <div class="three g">
       <div class="reveal"><span class="lbl">01</span><h3>We kiezen streng</h3><p>We verdienen alleen als jij wint. Maak je geen reële kans, dan zeggen we dat na het eerste gesprek. Eerlijk en meteen.</p></div>
-      <div class="reveal d1"><span class="lbl">02</span><h3>Geen verrassingen</h3><p>Het percentage staat vooraf zwart op wit. Geen uurtarief, geen voorschot, geen kosten achteraf.</p></div>
+      <div class="reveal d1"><span class="lbl">02</span><h3>Geen verrassingen</h3><p>De tarieven staan op deze site en in onze overeenkomst. Geen uurtarief, geen voorschot, geen kosten achteraf.</p></div>
       <div class="reveal d2"><span class="lbl">03</span><h3>Jouw tijd blijft van jou</h3><p>Een sterke inschrijving kost al snel 40 uur. Die uren maken wij, niet je projectleiders of calculators.</p></div>
     </div>
   </div>
@@ -973,6 +985,7 @@ details[open] .tiers li:nth-child(3) i{animation-delay:.2s}
               <li><span>€250.000 tot €1 mln</span><b>2,5%</b><i style="--w:.714"></i></li>
               <li><span>boven €1 mln</span><b>1,5%</b><i style="--w:.429"></i></li>
             </ul>
+            <div class="pc-ex"><span>Voorbeeld</span><p>Opdracht van €600.000</p><p class="calc">€8.750 + €8.750 = <b>€17.500</b></p></div>
             <p class="pc-f">Berekend per schijf van de opdrachtwaarde</p>
           </div>
           <div class="pc dark">
@@ -1115,7 +1128,7 @@ details[open] .tiers li:nth-child(3) i{animation-delay:.2s}
   onScroll();
 
   /* werkwijze: auto-advancing steps */
-  var steps = $$('#steps li'), scenes = $$('.scene'), title = $('#panelTitle'), sheet = $('#sheet'), names = ['Gevonden tenders','Belgesprek','Inschrijving','Uitslag'];
+  var steps = $$('#steps li'), scenes = $$('.scene'), title = $('#panelTitle'), sheet = $('#sheet'), names = ['Gevonden tenders','Belgesprek','Inschrijving','Akkoord en indienen','Uitslag'];
   var cur = 0, timer = null, DUR = 7000, list = $('#steps');
   function show(k, user){
     cur = k;
