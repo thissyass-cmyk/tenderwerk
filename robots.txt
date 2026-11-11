@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /bedankt.html
 
-Sitemap: https://thissyass-cmyk.github.io/tenderwerk/sitemap.xml
+Sitemap: https://tenderbouw.nl/sitemap.xml
